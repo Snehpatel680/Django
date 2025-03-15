@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .conten{
+            border: 2.5px solid black ;
+            width: 30%;
+            padding: 20px;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            background-color: dimgray;
+
+        }
+        input{
+            width: 90%;
+            height: 30px;
+            border: 2.5px solid black;
+        }
+        .inp1{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="main"> 
+            <div class="conten">
+                <h1>employee details</h1>
+                <input type="text" name="fname" placeholder="name">
+                <input type="file" name="image" class="inp1">
+                <input type="submit">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
